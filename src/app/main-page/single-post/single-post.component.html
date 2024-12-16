@@ -1,0 +1,8 @@
+<div>{{ singlePost.name }}</div>
+  <img class="image" src="{{ singlePost.image }}" alt="">
+  <div>{{ singlePost.likes }}</div>
+  @if (singlePost.isLiked) {
+    <img (click)="toggleLike(singlePost)" src="./assets/img/heart-red.png" alt="">
+  } @else {
+    <img (click)="toggleLike(singlePost)" src="./assets/img/heart-black.png" alt="">
+  }
